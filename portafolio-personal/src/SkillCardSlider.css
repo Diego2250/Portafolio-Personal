@@ -1,0 +1,64 @@
+.ContainerSkills {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+.InfoSkills,
+.FrontSide,
+.BackSide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 10px;
+  background: #060822;
+  padding: 20px;
+  width: 70%; 
+  height: 70%;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+
+.FrontSide,
+.BackSide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.FrontSide {
+  transform: rotateY(0deg);
+}
+
+.BackSide {
+  transform: rotateY(180deg);
+}
+
+.BackSide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  padding: 20px;
+}
+
+.BackSide h2,
+.BackSide p {
+  margin: 10px 0;
+}
+
+.cardClicked {
+  transform: rotateY(180deg);
+}
+
+p{
+  text-align: center;
+}

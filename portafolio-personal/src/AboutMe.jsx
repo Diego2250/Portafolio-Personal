@@ -8,7 +8,7 @@ const AboutMe = () => {
         <h2>About Me</h2>
         <div className='PhotoContainer'>
         <div className='AnimatedBorder'></div>
-        <img src='ruta_de_la_imagen' alt='Mi foto' />
+            <img src='src\assets\pp.png' alt='Mi foto' />
         </div>
         <p>Hello world! My name is Diego Morales, I live in Guatemala and I am Computer Science Student and a SAP Developer. Currently, I'm pursuing my third year of Computer Science and Information Technology Engineering at Universidad del Valle de Guatemala. I'm also working at Inforum Solutions as a SAP developer.</p>
         <p>My main interests are in the field of Data Bases and Data analytics. I'm always looking for new challenges and opportunities to learn new things.</p>
