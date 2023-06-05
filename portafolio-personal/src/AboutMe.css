@@ -1,0 +1,102 @@
+.ContainerAboutMe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #4e54c8;
+    background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);
+    width: 100%;
+    height: 100vh;
+  }
+  
+  .InfoAboutMe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    background: rgba(48, 48, 48, 0.5);
+    padding: 20px;
+    width: 60%; 
+    overflow: auto; 
+  }
+  
+  .PhotoContainer {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  p{
+    text-align: center;
+  }
+  
+  @keyframes animateBorder {
+    0% {
+      clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+      transform: rotate(0deg);
+      border-color: #FF0000;
+    }
+    12% {
+      clip-path: polygon(20% 0%, 100% 20%, 80% 100%, 0% 80%);
+      transform: rotate(40deg);
+      border-color: #00FF00;
+    }
+    24% {
+      clip-path: polygon(40% 0%, 100% 40%, 60% 100%, 0% 60%);
+      transform: rotate(80deg);
+      border-color: #0000FF;
+    }
+    36% {
+      clip-path: polygon(60% 0%, 100% 60%, 40% 100%, 0% 40%);
+      transform: rotate(120deg);
+      border-color: #FFFF00;
+    }
+    48% {
+      clip-path: polygon(80% 0%, 100% 80%, 20% 100%, 0% 20%);
+      transform: rotate(160deg);
+      border-color: #FF00FF;
+    }
+    60% {
+      clip-path: polygon(60% 0%, 100% 60%, 40% 100%, 0% 40%);
+      transform: rotate(200deg);
+      border-color: #FFFF00;
+    }
+    72% {
+      clip-path: polygon(40% 0%, 100% 40%, 60% 100%, 0% 60%);
+      transform: rotate(240deg);
+      border-color: #0000FF;
+    }
+    90% {
+      clip-path: polygon(20% 0%, 100% 20%, 80% 100%, 0% 80%);
+      transform: rotate(280deg);
+      border-color: #00FF00;
+    }
+    100% {
+      clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+      transform: rotate(360deg);
+      border-color: #FF0000;
+    }
+  }
+
+  
+  .AnimatedBorder {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 2px solid;
+    animation: animateBorder 10s infinite;
+    transition: border-width 0.5s ease-in-out;
+  }
+
+  .PhotoContainer img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+  }
