@@ -1,0 +1,78 @@
+.card {
+    width: fit-content;
+    height: fit-content;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+}
+
+
+.social-container {
+    width: 52px;
+    height: 52px;
+    background-color: #202020;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition-duration: .3s;
+}
+
+
+.container-one:hover {
+    background-color: #C935AF;
+    transition-duration: .3s;
+}
+
+
+.container-two:hover {
+    background-color: #1DA1F2;
+    transition-duration: .3s;
+}
+
+
+.container-three:hover {
+    background-color: #0077B5;
+    transition-duration: .3s;
+}
+
+
+.container-four:hover {
+    background-color: #25D366;
+    transition-duration: .3s;
+}
+
+
+.social-container:active {
+    transform: scale(0.9);
+    transition-duration: .3s;
+}
+
+
+.social-svg {
+    width: 17px;
+}
+
+.social-svg path {
+    fill: #FFFFFF;
+}
+
+.social-container:hover .social-svg {
+    animation: slide-in-top 0.3s both;
+}
+
+
+@keyframes slide-in-top {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

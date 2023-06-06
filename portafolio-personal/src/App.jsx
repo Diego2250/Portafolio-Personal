@@ -2,6 +2,8 @@ import './App.css'
 import React from 'react'
 import AboutMe from './AboutMe'
 import SkillCardSlider from './SkillCardSlider'
+import Social from './Social'
+import Proyects from './Proyects'
 
 function App() {
   const skillCards1 = [
@@ -67,22 +69,37 @@ function App() {
       }
   ];
 
+  const proyectosData = [
+    {
+      imageLink: 'https://seeklogo.com/images/P/python-logo-C50EED1930-seeklogo.com.png',
+      title: 'Sistema de manejo de hospitales',
+      description: 'Se realizó un sistema de manejo en el cual se pueden registrar pacientes, doctores, casos medicos, enfermedades, centros de salud, etc. Tiene un sistema de validacion de usuarios y se pueden realizar consultas de lectura y escritura a una base de datos El sistema fue realizado en Python y se utilizó Postgres como base de datos.',
+      buttonLink: 'enlace-1'
+    },
+    {
+      imageLink: 'ruta-de-la-imagen-2',
+      title: 'Título de la Carta 2',
+      description: 'Descripción de la Carta 2',
+      buttonLink: 'enlace-2'
+    },
+    {
+      imageLink: 'ruta-de-la-imagen-3',
+      title: 'Título de la Carta 3',
+      description: 'Descripción de la Carta 3',
+      buttonLink: 'enlace-3'
+    },
+    {
+      imageLink: 'ruta-de-la-imagen-4',
+      title: 'Título de la Carta 4',
+      description: 'Descripción de la Carta 4',
+      buttonLink: 'enlace-4'
+    }
+  ];
+
   return (
     <>
     <div class="area" >
       <AboutMe />
-      <ul class="circles">
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-      </ul>
       <h2>Skills</h2>
       <div className='cards'>
         {skillCards1.map((card, index) => (
@@ -94,8 +111,44 @@ function App() {
           />
         ))}
       </div>
+      <h2>Proyects</h2>
+      <div className='proyects'>
+        {proyectosData.map((proyecto, index) => (
+          <Proyects
+            key={index}
+            imageLink={proyecto.imageLink}
+            title={proyecto.title}
+            description={proyecto.description}
+            buttonLink={proyecto.buttonLink}
+          />
+        ))}
+      </div>
+      <div className='footer'>
+        <div className='words'>
+          <ul class="t">
+            <li className='word'>repeat.</li>
+            <li className='word'>Develop.</li>
+            <li className='word'>design.</li>
+            <li className='word'>Sketch.</li>
+            <li className='word'>Imagine.</li>
+          </ul>
+        </div>
+        <h2>Contact me!</h2>    
+        <Social />
+        <ul class="circles">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+        </ul>
+      </div>
     </div>
-
     </>
   )
 }

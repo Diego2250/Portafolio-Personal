@@ -1,13 +1,14 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:700");
+
 .cards{
+  margin: 0 auto;
   display: grid;
+  gap: 1rem;
+  background: transparent;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 20px;
-  justify-content: center;
-  align-items: center;
   width: 100%;
   height: 200vh;
-  position: relative;
-  overflow: hidden;
+  max-width: 1200px;
   font-family: "Montserrat", sans-serif;
 }
 
@@ -26,8 +27,6 @@ h2{
   background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);
 }
 
-@import url("https://fonts.googleapis.com/css?family=Montserrat:700");
-
 body {
   margin: 0;
   padding: 0;
@@ -35,12 +34,8 @@ body {
 }
 
 .circles{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
+    position: relative;
+    z-index: 1;
 }
 
 .circles li{
@@ -148,3 +143,72 @@ body {
     }
 
 }
+
+div.footer{
+    background-color: black;
+    padding-bottom: 10px;
+    align-items: center;
+}
+
+div.words{
+    margin: 0 auto;
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+    overflow: hidden;
+    background: transparent;
+    margin: 6.25em auto;
+	height: 3em;
+    padding-bottom: 10px;
+	overflow: hidden;
+	width: 100%;
+}
+    ul.t,
+	li.word {
+	  height: 13.5em;
+	  margin: 0px;
+	  padding: 0px;
+	  width: 100%;
+	}
+	
+	li.word {
+	  list-style-type: none;
+	  margin: 0px 0 1px 0;
+	  height: 1em !important;
+	  padding: 0px 0 0px 0;
+	  font-size: 3em;
+	  text-transform: uppercase;
+	  width: 100%;
+	}
+.t {
+    animation-name: titleflip;
+    animation: titleflip 5s ease-in-out infinite;
+      }
+  
+  @keyframes titleflip {
+    0%, 20% {
+    transform: translate(0px, -12.50em);
+    }
+    20%,
+    40% {
+   transform: translate(0px, -9.375em);
+    }
+    40%,
+    60% {
+      -webkit-transform: translate(0px, -6.44em);
+    }
+    60%,
+    80% {
+    transform: translate(0px, -3.44em);
+    }
+    80%,
+    100% {
+    transform: translate(0px, -0.315em);
+    }
+    100%,
+    0% {
+      transform: translate(0px, -12.50em);
+    }
+  }
+
