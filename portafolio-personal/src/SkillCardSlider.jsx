@@ -1,8 +1,7 @@
-import  './SkillCardSlider.css'
-import React from 'react';
-import { useState } from 'react';
+import './SkillCardSlider.css';
+import React, { useState } from 'react';
 
-const SkillCardSlider = ({ imageUrl, title, description }) => {
+function SkillCardSlider({ imageUrl, title, description }) {
   const [isCardClicked, setCardClicked] = useState(false);
 
   const handleClick = () => {
@@ -10,16 +9,16 @@ const SkillCardSlider = ({ imageUrl, title, description }) => {
   };
 
   return (
-    <div className='ContainerSkills'>
+    <div className="ContainerSkills">
       <div
         className={`InfoSkills ${isCardClicked ? 'cardClicked' : ''}`}
         onClick={handleClick}
       >
-        <div className='FrontSide'>
+        <div className="FrontSide">
           <h2>{title}</h2>
-          <img src={imageUrl} height='140' alt='Card' />
+          <img src={imageUrl} height="140" alt="Card" />
         </div>
-        <div className='BackSide'>
+        <div className="BackSide">
           <h2>Description</h2>
           <p>{description}</p>
         </div>
@@ -27,6 +26,5 @@ const SkillCardSlider = ({ imageUrl, title, description }) => {
     </div>
   );
 }
-
 
 export default SkillCardSlider;
